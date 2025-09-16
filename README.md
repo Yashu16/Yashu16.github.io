@@ -1,3 +1,3 @@
 # Yashu16.github.io
-*MSML602*
+**MSML602**  
 Yaswanth Kottana
