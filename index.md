@@ -154,17 +154,17 @@ combined_df.info()
 **File Format:** Pandas DataFrame
 
 ### Data Type Distribution
-| Data Type | Count | Description |
+|     Data Type |    Count  |         Description             |
 
-| :--- | :--- | :--- |
+| :-------------| :---------| :-------------------------------|
 
-| **float64** | 70 | Likely continuous variables, metrics, or integers containing `NaN` values. |
+| **float64**   |    70     | Likely continuous variables, metrics, or integers containing `NaN` values. |
 
-| **object** | 27 | Text data, categorical strings, or mixed types. |
+| **object**    |    27     | Text data, categorical strings, or mixed types. |
 
-| **int64** | 22 | Whole numbers (counts, IDs, or flags). |
+| **int64**     |    22     | Whole numbers (counts, IDs, or flags). |
 
-| **Total** | **119** | |
+| **Total** |     **119**   |        |
 
 ## **Data Processing**
 
