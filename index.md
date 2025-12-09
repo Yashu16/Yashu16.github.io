@@ -147,7 +147,7 @@ combined_df.info()
     memory usage: 4.0+ GB
     
 
-# Dataset Structure Overview
+## Dataset Structure Overview
 
 **Dimensions:** 4,505,420 rows $\times$ 119 columns
 **Memory Usage:** 4.0+ GB
@@ -155,10 +155,15 @@ combined_df.info()
 
 ### Data Type Distribution
 | Data Type | Count | Description |
+
 | :--- | :--- | :--- |
+
 | **float64** | 70 | Likely continuous variables, metrics, or integers containing `NaN` values. |
+
 | **object** | 27 | Text data, categorical strings, or mixed types. |
+
 | **int64** | 22 | Whole numbers (counts, IDs, or flags). |
+
 | **Total** | **119** | |
 
 ## **Data Processing**
