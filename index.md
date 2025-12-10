@@ -2,6 +2,7 @@
 title: "Analysis of Flight Delays in the United States"
 permalink: /
 ---
+<link rel="stylesheet" href="/assets/css/style.css">
 
 # **Analysis of Flight Delays in the United States**
 ##### Gowtham Senthil, Surendra Kumar Chandrasekaran, Yaswanth Kottana
@@ -19,12 +20,14 @@ We will be using Python and other popular data science libraries in Google Colab
 
 
 <div class="toc">
-- [Data collection](#data-collection)
-- [Data processing](#data-processing)
-- [Exploration Data Analysis and Visualization](#exploration-data-analysis-and-visualization)
-- [Machine Learning Model Development](#machine-learning-model-development)
-- [Model Training and Evaluation](#model-training-and-evaluation)
-- [Model Interpretation](#model-interpretation)
+  <ul>
+    <li><a href="#data-collection">Data collection</a></li>
+    <li><a href="#data-processing">Data processing</a></li>
+    <li><a href="#exploration-data-analysis-and-visualization">Exploration, Data Analysis and Visualization</a></li>
+    <li><a href="#machine-learning-model-development">Machine Learning Model Development</a></li>
+    <li><a href="#model-training-and-evaluation">Model Training and Evaluation</a></li>
+    <li><a href="#model-interpretation">Model Interpretation</a></li>
+  </ul>
 </div>
 
 ### Mounting Google Drive
