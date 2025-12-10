@@ -388,10 +388,39 @@ new_df = combined_df[(combined_df['CANCELLED'] == 0) & (combined_df['DIVERTED'] 
 #And after fiteling out cancelled and diverted flights, we take only the needed columns
 filtered_df = new_df[filter_cols]
 ```
-<video style = "width: 100%; height: auto;" controls>
-  <source src="{{ '/assets/videos/animation.webm' | relative_url }}" type="video/webm">
-  Your browser does not support the video tag.
+<style>
+.hero-small {
+  width: 100%;
+  clear: both;                /* place below any floats (remove if you want it beside floats) */
+  display: flex;
+  justify-content: center;    /* horizontal centering */
+  align-items: center;        /* vertical centering inside the row */
+  margin: 1rem 0;             /* spacing above/below */
+  box-sizing: border-box;
+}
+
+/* The video itself: set the desired visual width, keep responsive */
+.small-video {
+  width: 640px;    /* desired width (change to 480/320 etc) */
+  max-width: 100%; /* responsive: won't overflow on small screens */
+  height: auto;
+  display: block;
+  border: 0;
+  object-fit: cover;  /* preserves the crop behavior if needed */
+}
+@media (max-width: 480px) {
+  .small-video { width: 100%; } /* full-width on very small screens */
+}
+</style>
+
+<header class="hero-small">
+  <video class="small-video" autoplay muted loop playsinline preload="metadata" poster="{{ '/assets/images/Airport-board.jpeg' | relative_url }}">
+    <source src="{{ '/assets/videos/animation.webm' | relative_url }}" type="video/webm">
+    <source src="{{ '/assets/videos/animation.mp4' | relative_url }}" type="video/mp4">
+    <!-- fallback image -->
+    <img src="{{ '/assets/images/animation-fallback.jpeg' | relative_url }}" alt="Animated fallback">
   </video>
+</header>
 
 ### Confirming Data Quality
 
