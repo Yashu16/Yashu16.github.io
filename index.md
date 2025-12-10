@@ -389,7 +389,7 @@ new_df = combined_df[(combined_df['CANCELLED'] == 0) & (combined_df['DIVERTED'] 
 filtered_df = new_df[filter_cols]
 ```
 <style>
-.hero-header { width: 50%; overflow: hidden; margin-bottom: 1.25rem; }
+.hero-header { width: 100%; overflow: hidden; margin-bottom: 1.25rem; }
 .hero-img {
   display: block;
   width: 100%;
@@ -404,8 +404,8 @@ filtered_df = new_df[filter_cols]
 }
 </style>
 <!-- Hero video: uses webm first (best) then mp4, with a fallback gif/image -->
-<header class="hero-small">
-  <video class="small-video"
+<header class="hero-header">
+  <video class="hero-img"
          autoplay
          muted
          loop
