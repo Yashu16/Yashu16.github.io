@@ -388,21 +388,10 @@ new_df = combined_df[(combined_df['CANCELLED'] == 0) & (combined_df['DIVERTED'] 
 #And after fiteling out cancelled and diverted flights, we take only the needed columns
 filtered_df = new_df[filter_cols]
 ```
-<style>
-.hero-header { width: 100%; overflow: hidden; margin-bottom: 1.25rem; }
-.hero-img {
-  display: block;
-  width: 100%;
-  height: 34vh;         /* lower = shorter (wider look) */
-  max-height: 360px;    /* cap absolute height on very large screens */
-  object-fit: cover;
-  object-position: center;
-  border: 0;
-}
-@media (max-width: 900px) {
-  .hero-img { height: 26vh; max-height: 220px; }
-}
-</style>
+<video width = "600" controls>
+  <source src="{{ '/assets/videos/animation.mp4' |relative_url }}"  type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 <!-- Hero video: uses webm first (best) then mp4, with a fallback gif/image -->
 <header class="hero-header">
   <video class="hero-img"
