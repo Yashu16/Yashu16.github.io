@@ -19,6 +19,7 @@ We will be using Python and other popular data science libraries in Google Colab
 
 <div class="toc">
 - [Data Collection](#datacollection)
+</div>
 
 ### Mounting Google Drive
 First, we'll mount Google Drive to access our dataset files. You can skip this step if you're running the notebook locally, and had downloaded the dataset files to your local machine.
