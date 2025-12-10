@@ -388,11 +388,9 @@ new_df = combined_df[(combined_df['CANCELLED'] == 0) & (combined_df['DIVERTED'] 
 #And after fiteling out cancelled and diverted flights, we take only the needed columns
 filtered_df = new_df[filter_cols]
 ```
-<video width = "600" controls>
+<video style = "width: 100%; height: auto;" controls>
   <source src="{{ '/assets/videos/animation.webm' | relative_url }}" type="video/webm">
   Your browser does not support the video tag.
-    <!-- MP4 fallback -->
-    <source src="{{ '/assets/videos/animation.mp4' | relative_url }}" type="video/mp4">
   </video>
 
 ### Confirming Data Quality
