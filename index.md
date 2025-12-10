@@ -1,10 +1,10 @@
-<header class="hero-header">
-  <img src="{{ '/assets/images/Airport-board.jpeg' | relative_url }}" alt="Airport departures board with blurred travelers" class="hero-img">
-</header>
 ---
 title: "Analysis of Flight Delays in the United States"
 permalink: /
 ---
+<header class="hero-header">
+  <img src="{{ '/assets/images/Airport-board.jpeg' | relative_url }}" alt="Airport departures board with blurred travelers" class="hero-img">
+</header>
 
 # **Analysis of Flight Delays in the United States**
 ##### Gowtham Senthil, Surendra Kumar Chandrasekaran, Yaswanth Kottana
