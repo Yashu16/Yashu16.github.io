@@ -2016,84 +2016,13 @@ plt.show()
     
 
 
-### Understanding What Drives Delay Predictions
+### Interpretations 
 
 This feature importance chart reveals which factors most influenced our XGBoost model's delay predictions.
 
-Top 10 Most Important Features:
+OP_UNIQUE_CARRIER is the strongest predictor, most of the delays happen due to a particular airline operate their business. Next few features tell us that late night departures tend to be delayed, so it's better to choose morning flights, like data suggested and also their origin is important, so, if you had to choose between two airports, you know what to choose now. And most of us are already conditioned to choose one particular airline, just because we are always traveling with it, but this time, you know how to use data science tools and analyze the insights, so make your analysis and choose one that's most beneficial. 
 
-1. OP_UNIQUE_CARRIER (2091) - Airline identity is the **strongest predictor**
-   - Different carriers have drastically different operational standards
-   - Validates our EDA showing 10% variation between best/worst carriers
-   - Captures airline-specific factors: fleet age, maintenance, culture, schedule padding
-
-2. SCHED_DEP_MINUTES (1363) - Scheduled departure time (minutes since midnight)
-   - Confirms the delay propagation phenomenon
-   - Later departures = higher delay probability
-   - The continuous representation captures fine-grained temporal patterns
-
-3. ORIGIN (1198) - Departure airport
-   - Airport infrastructure, weather, and congestion vary dramatically
-   - DFW, DEN, ATL vs PHX, LAX, SEA performance differences
-
-4. DOW_SIN (1125) - Day of week (sine component of cyclical encoding)
-   - Thursday/Friday peak delays vs Tuesday low delays
-   - Cyclical encoding successfully captured weekly patterns
-
-5. DOW_COS (1013) - Day of week (cosine component)
-   - Complements DOW_SIN for full weekly cycle representation
-
-6. ROUTE (970) - Origin-destination combination
-   - Specific route pairs (e.g., DCA->AUS) have persistent delay issues
-   - Captures airspace, weather corridor, and competitive dynamics
-
-7. DISTANCE (830) - Flight distance in miles
-   - Non-linear relationship we observed in EDA
-   - Medium distances slightly worse than very long/short
-
-8. DEST (759) - Destination airport
-   - Where you're going affects departure delay likelihood
-   - Destination congestion feeds back to departure decisions
-
-9. DEP_HOUR_SIN (324) - Departure hour cyclical encoding (sine)
-   - Another representation of time-of-day effects
-   - Hour 23 → Hour 0 continuity preserved
-
-10. DEP_TIME_BLK (165) - Categorical departure time blocks
-    - Complements continuous time representations
-    - Captures step-function changes between time periods
-
-Lower Importance Features:
-- DEP_HOUR_COS (159): Cosine component of hour
-- DIST_BIN (48): Distance categories (very short, short, medium, long, very long)
-- TIME_OF_DAY (1): Morning/Afternoon/Evening/Midnight - minimal unique information
-
-Insights from Feature Importance:
-
-**1. Carrier Dominates (Surprise!):**
-   - We expected route/time to dominate, but **airline identity is #1**
-   - This suggests operational differences between carriers are even larger than airport/time effects
-   - Implication: **Choosing the right airline matters more than choosing the right time**
-
-**2. Temporal Features Are Complex:**
-   - Multiple time representations appear (SCHED_DEP_MINUTES, DOW_SIN/COS, DEP_HOUR_SIN, DEP_TIME_BLK)
-   - The model uses *complementary temporal features* rather than relying on just one
-   - Different representations capture different aspects: trends (continuous) vs shifts (categorical)
-
-**3. Geography Matters:**
-   - ORIGIN (1198) > ROUTE (970) > DEST (759)
-   - *Where you depart from matters more* than the destination
-   - It makes sense since departure delays are influenced by local airport conditions. 
-
-**4. Cyclical Encoding Success:**
-   - DOW_SIN/COS (1125 + 1013 = 2138 combined) very important
-   - DEP_HOUR_SIN (324) present but lower
-   - Cyclical encoding successfully captured periodic patterns
-
-**5. Engineered Features Paid Off:**
-   - ROUTE (origin + destination) is important standalone feature
-   - Multiple temporal representations give model flexibility
-   - DIST_BIN less useful than raw DISTANCE
+Sin and Cos showed us flights on thursday and friday are busy whereas tuesday and wednesday has less chances of getting  delayed, and along with this, certain specific routes have more delays, so avoid them if possible. 
 
 Validation Against EDA:
 
@@ -2105,18 +2034,7 @@ Our importance rankings align with EDA findings:
 -  **Day of week relevant** (DOW features #4, #5)
 -  **Day of month minimal** (not in top features)
 
-Model Trustworthiness:
-
-The fact that feature importance rankings match our exploratory analysis is **strong evidence our model learned real patterns** rather than spurious correlations.
-
-Recommendations based on Feature Importance:
-
-For passengers seeking to minimize delay risk:
-1. **Choose carrier carefully** (Some of you might have gotten used to a particular airline, but switching might reduce delay risk significantly) 
-2. **Book earliest departure possible** (time-of-day effect)
-3. **Prefer better-performing origin airports** (Choose nearby airport than the one with relatively higher delays which our model predicts)
-4. **Avoid Thursday/Friday** if flexible
-5. **Research specific route history** (some routes consistently problematic)
+The fact that feature importance rankings match our exploratory analysis is strong evidence our model learned the patterns rather than spurious correlations.
 
 For airlines seeking to improve on-time performance:
 1. **Benchmark against best-performing carriers** (operational practices matter most)
