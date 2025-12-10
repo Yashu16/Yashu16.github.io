@@ -1,0 +1,28 @@
+/* TOC block style */
+.toc {
+  float: right;
+  width: 220px;
+  margin-left: 1rem;
+  margin-top: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  border-left: 3px solid #eee;
+  padding-left: 0.75rem;
+  position: sticky;
+  top: 1rem;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 900px) {
+  .toc {
+    float: none;
+    width: auto;
+    position: static;
+    border-left: none;
+    padding-left: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+.toc a { color: inherit; text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
