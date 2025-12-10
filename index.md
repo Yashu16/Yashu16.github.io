@@ -390,8 +390,8 @@ filtered_df = new_df[filter_cols]
 ```
 
 <!-- Hero video: uses webm first (best) then mp4, with a fallback gif/image -->
-<header class="hero-header">
-  <video class="hero-img"
+<header class="hero-small">
+  <video class="small-video"
          autoplay
          muted
          loop
