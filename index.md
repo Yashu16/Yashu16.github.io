@@ -17,6 +17,9 @@ To find patterns and perform predictive analysis, the best tool in our hand is D
 
 We will be using Python and other popular data science libraries in Google Colab for this tutorial. Colab is amazing if you are just starting your data science journey. You can learn more about [Google Colab here](https://colab.research.google.com/notebooks/intro.ipynb).
 
+<div class="toc">
+- [Data Collection](#datacollection)
+
 ### Mounting Google Drive
 First, we'll mount Google Drive to access our dataset files. You can skip this step if you're running the notebook locally, and had downloaded the dataset files to your local machine.
 
@@ -104,7 +107,7 @@ import category_encoders as ce
 from sklearn.ensemble import RandomForestClassifier
 ```
 
-## **Data Collection**
+## **Data Collection** {datacollection}
 ### Download and import the data
 
 **Data Source:** [Bureau of Transportation Statistics - On-Time Performance](https://transtats.bts.gov/Fields.asp?gnoyr_VQ=FGJ)
@@ -149,22 +152,9 @@ combined_df.info()
 
 ## Dataset Structure Overview
 
-**Dimensions:** 4,505,420 rows $\times$ 119 columns
+**Dimensions:** 4,505,420 rows and 119 columns
 **Memory Usage:** 4.0+ GB
 **File Format:** Pandas DataFrame
-
-### Data Type Distribution
-|     Data Type |    Count  |         Description             |
-
-| :-------------| :---------| :-------------------------------|
-
-| **float64**   |    70     | Likely continuous variables, metrics, or integers containing `NaN` values. |
-
-| **object**    |    27     | Text data, categorical strings, or mixed types. |
-
-| **int64**     |    22     | Whole numbers (counts, IDs, or flags). |
-
-| **Total** |     **119**   |        |
 
 ## **Data Processing**
 
