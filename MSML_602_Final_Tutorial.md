@@ -15,10 +15,15 @@ We will be using Python and other popular data science libraries in Google Colab
 Table of contents:
 <div class="toc">
 - [Data Collection](#Data Collection)
+    
 - [Data Processing](#Data Processing)
+- 
 - [Exploratory Data Analysis and Visualization](#Exploratory Data Analysis and Visualization)
+- 
 - [Machine Learning Model Development](#Machine Learning Model Development)
+- 
 - [Model Interpretation](#Model Interpretation)
+- 
 </div>    
 
 ### Mounting Google Drive
@@ -2043,5 +2048,6 @@ Learn more about [XGBoost feature importance](https://xgboost.readthedocs.io/en/
 ```python
 
 ```
+
 
 
