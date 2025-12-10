@@ -1,7 +1,6 @@
 ---
 title: "Analysis of Flight Delays in the United States"
 permalink: /
-<link rel="stylesheet" href="/assets/css/style.css">
 ---
 
 # **Analysis of Flight Delays in the United States**
@@ -23,7 +22,7 @@ We will be using Python and other popular data science libraries in Google Colab
   <ul>
     <li><a href="#data-collection">Data collection</a></li>
     <li><a href="#data-processing">Data processing</a></li>
-    <li><a href="#exploration-data-analysis-and-visualization">Exploration, Data Analysis and Visualization</a></li>
+    <li><a href="#exploratory-data-analysis-and-visualization">Exploratory Data Analysis and Visualization</a></li>
     <li><a href="#machine-learning-model-development">Machine Learning Model Development</a></li>
     <li><a href="#model-training-and-evaluation">Model Training and Evaluation</a></li>
     <li><a href="#model-interpretation">Model Interpretation</a></li>
