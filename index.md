@@ -1,8 +1,8 @@
 ---
 title: "Analysis of Flight Delays in the United States"
 permalink: /
----
 <link rel="stylesheet" href="/assets/css/style.css">
+---
 
 # **Analysis of Flight Delays in the United States**
 ##### Gowtham Senthil, Surendra Kumar Chandrasekaran, Yaswanth Kottana
@@ -166,7 +166,7 @@ combined_df.info()
 **Memory Usage:** 4.0+ GB
 **File Format:** Pandas DataFrame
 
-## **Data Processing** {data-processing}
+## **Data Processing** {#data-processing}
 
 ### Feature Selection Rationale
 
@@ -548,7 +548,7 @@ airports_to_keep = flight_counts[flight_counts >= median_flights].index
 filtered_df = filtered_df[filtered_df['ORIGIN'].isin(airports_to_keep)]
 ```
 
-## **Exploratory Data Analysis and Visualization** {exploratory-data-analysis-and-visualization}
+## **Exploratory Data Analysis and Visualization** {#exploratory-data-analysis-and-visualization}
 
 Exploratory Data Analysis (EDA) helps us understand patterns, relationships, and anomalies in our data before building predictive models. Good visualizations can reveal insights that summary statistics might miss.
 
@@ -1005,7 +1005,7 @@ Some reasons on why this might happen:
 
 Our data analysis so far has revealed several important patterns affecting flight delays. These insights will guide our feature engineering and model selection in the next steps of our data science workflow. Now, we will move on to the Machine Learning part of the tutorial. 
 
-## Machine Learning Model Development {machine-learning-model-development}
+## Machine Learning Model Development {#machine-learning-model-development}
 
 ### Feature Engineering
 
@@ -1515,7 +1515,7 @@ print("Target distribution:", df_encoded[target].value_counts(normalize=True))
     Name: proportion, dtype: float64
     
 
-## Model Training and Evaluation {model-training-and-evaluation}
+## Model Training and Evaluation {#model-training-and-evaluation}
 
 ### Baseline Model: Random Forest Classifier
 
@@ -1894,7 +1894,7 @@ This demonstrates a critical lesson in applied ML: **model selection and thresho
 
 We have applied our model to predict flight delays effectively. By using advanced techniques like SMOTE and XGBoost, along with careful threshold tuning, we significantly improved our ability to identify delayed flights. Now, final part of the tutorial is to interpret the model and understand which features are most influential in predicting delays.
 
-## Model Interpretation {model-interpretation}
+## Model Interpretation {#model-interpretation}
 
 ### Understanding Feature Importance
 
