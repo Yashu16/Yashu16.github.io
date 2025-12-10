@@ -1,3 +1,6 @@
+<header class="hero-header">
+  <img src="{{ '/assets/images/Airport-board.jpg' | relative_url }}" alt="Airport departures board with blurred travelers" class="hero-img">
+</header>
 ---
 title: "Analysis of Flight Delays in the United States"
 permalink: /
