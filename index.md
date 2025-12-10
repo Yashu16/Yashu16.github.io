@@ -17,8 +17,14 @@ To find patterns and perform predictive analysis, the best tool in our hand is D
 
 We will be using Python and other popular data science libraries in Google Colab for this tutorial. Colab is amazing if you are just starting your data science journey. You can learn more about [Google Colab here](https://colab.research.google.com/notebooks/intro.ipynb).
 
+
 <div class="toc">
-- [Data Collection](#datacollection)
+- [Data collection](#data-collection)
+- [Data processing](#data-processing)
+- [Exploration Data Analysis and Visualization](#exploration-data-analysis-and-visualization)
+- [Machine Learning Model Development](#machine-learning-model-development)
+- [Model Training and Evaluation](#model-training-and-evaluation)
+- [Model Interpretation](#model-interpretation)
 </div>
 
 ### Mounting Google Drive
@@ -108,7 +114,7 @@ import category_encoders as ce
 from sklearn.ensemble import RandomForestClassifier
 ```
 
-## **Data Collection** {datacollection}
+## **Data Collection** {#data-collection}
 ### Download and import the data
 
 **Data Source:** [Bureau of Transportation Statistics - On-Time Performance](https://transtats.bts.gov/Fields.asp?gnoyr_VQ=FGJ)
@@ -157,7 +163,7 @@ combined_df.info()
 **Memory Usage:** 4.0+ GB
 **File Format:** Pandas DataFrame
 
-## **Data Processing**
+## **Data Processing** {data-processing}
 
 ### Feature Selection Rationale
 
@@ -539,7 +545,7 @@ airports_to_keep = flight_counts[flight_counts >= median_flights].index
 filtered_df = filtered_df[filtered_df['ORIGIN'].isin(airports_to_keep)]
 ```
 
-## **Exploratory Data Analysis and Visualization**
+## **Exploratory Data Analysis and Visualization** {exploratory-data-analysis-and-visualization}
 
 Exploratory Data Analysis (EDA) helps us understand patterns, relationships, and anomalies in our data before building predictive models. Good visualizations can reveal insights that summary statistics might miss.
 
@@ -643,7 +649,7 @@ This chart compares delay rates across different airline carriers operating in t
 - **Fleet age and type**: Older aircraft or certain aircraft types may have more mechanical issues.
 - **Business model**: Budget carriers often have tighter turnaround schedules with less buffer time.
 
-**Data Science Insight:** This substantial variation confirms that carrier identity (`OP_UNIQUE_CARRIER`) is a valuable predictive feature for our model.
+This substantial variation confirms that carrier identity (`OP_UNIQUE_CARRIER`) is a valuable predictive feature for our model.
 
 ### Monthly Timing Patterns
 
@@ -996,7 +1002,7 @@ Some reasons on why this might happen:
 
 Our data analysis so far has revealed several important patterns affecting flight delays. These insights will guide our feature engineering and model selection in the next steps of our data science workflow. Now, we will move on to the Machine Learning part of the tutorial. 
 
-## Machine Learning Model Development
+## Machine Learning Model Development {machine-learning-model-development}
 
 ### Feature Engineering
 
@@ -1506,7 +1512,7 @@ print("Target distribution:", df_encoded[target].value_counts(normalize=True))
     Name: proportion, dtype: float64
     
 
-## Model Training and Evaluation
+## Model Training and Evaluation {model-training-and-evaluation}
 
 ### Baseline Model: Random Forest Classifier
 
@@ -1885,7 +1891,7 @@ This demonstrates a critical lesson in applied ML: **model selection and thresho
 
 We have applied our model to predict flight delays effectively. By using advanced techniques like SMOTE and XGBoost, along with careful threshold tuning, we significantly improved our ability to identify delayed flights. Now, final part of the tutorial is to interpret the model and understand which features are most influential in predicting delays.
 
-## Model Interpretation
+## Model Interpretation {model-interpretation}
 
 ### Understanding Feature Importance
 
