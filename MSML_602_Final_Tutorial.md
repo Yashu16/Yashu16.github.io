@@ -150,7 +150,6 @@ combined_df.info()
 
 ### Data Type Distribution
 | Data Type | Count | Description |
-| :--- | :--- | :--- |
 | **float64** | 70 | Likely continuous variables, metrics, or integers containing `NaN` values. |
 | **object** | 27 | Text data, categorical strings, or mixed types. |
 | **int64** | 22 | Whole numbers (counts, IDs, or flags). |
@@ -2035,3 +2034,4 @@ Learn more about [XGBoost feature importance](https://xgboost.readthedocs.io/en/
 ```python
 
 ```
+
