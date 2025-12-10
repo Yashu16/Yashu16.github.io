@@ -12,6 +12,15 @@ To find patterns and perform predictive analysis, the best tool in our hand is D
 
 We will be using Python and other popular data science libraries in Google Colab for this tutorial. Colab is amazing if you are just starting your data science journey. You can learn more about [Google Colab here](https://colab.research.google.com/notebooks/intro.ipynb).
 
+Table of contents:
+<div class="toc">
+- [Data Collection](#Data Collection)
+- [Data Processing](#Data Processing)
+- [Exploratory Data Analysis and Visualization](#Exploratory Data Analysis and Visualization)
+- [Machine Learning Model Development](#Machine Learning Model Development)
+- [Model Interpretation](#Model Interpretation)
+</div>    
+
 ### Mounting Google Drive
 First, we'll mount Google Drive to access our dataset files. You can skip this step if you're running the notebook locally, and had downloaded the dataset files to your local machine.
 
@@ -2034,4 +2043,5 @@ Learn more about [XGBoost feature importance](https://xgboost.readthedocs.io/en/
 ```python
 
 ```
+
 
