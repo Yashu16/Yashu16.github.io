@@ -389,24 +389,11 @@ new_df = combined_df[(combined_df['CANCELLED'] == 0) & (combined_df['DIVERTED'] 
 filtered_df = new_df[filter_cols]
 ```
 <video width = "600" controls>
-  <source src="{{ '/assets/videos/animation.mp4' |relative_url }}"  type="video/mp4">
+  <source src="{{ '/assets/videos/animation.webm' | relative_url }}" type="video/webm">
   Your browser does not support the video tag.
-</video>
-<!-- Hero video: uses webm first (best) then mp4, with a fallback gif/image -->
-<header class="hero-header">
-  <video class="hero-img"
-         autoplay
-         muted
-         loop
-         playsinline
-         preload="metadata"
-         poster="{{ '/assets/images/Airport-board.jpeg' | relative_url }}">
-    <!-- Preferred modern format first -->
-    <source src="{{ '/assets/videos/animation.webm' | relative_url }}" type="video/webm">
     <!-- MP4 fallback -->
     <source src="{{ '/assets/videos/animation.mp4' | relative_url }}" type="video/mp4">
   </video>
-</header>
 
 ### Confirming Data Quality
 
