@@ -32,6 +32,41 @@ permalink: /
 ## **Introduction**
 Some of you might have experienced flight delays during your travels. It's frustrating when your perfectly planned trip gets disrupted due to unforeseen delays. We have all been there. But, the thing is, sometimes you can't avoid them entirely. However, this got us thinking, what could be the reasons behind these delays? What if we can find patterns that contribute to flight delays? Even if you have never experienced a flight delay, knowing the reasons behind will help you decide better while booking your next flight. We all have busy lives, so why make travel more complicated?
 
+<style>
+.hero-small {
+  width: 100%;
+  clear: both;                /* place below any floats (remove if you want it beside floats) */
+  display: flex;
+  justify-content: center;    /* horizontal centering */
+  align-items: center;        /* vertical centering inside the row */
+  margin: 1rem 0;             /* spacing above/below */
+  box-sizing: border-box;
+}
+
+/* The video itself: set the desired visual width, keep responsive */
+.small-video {
+  width: 640px;    /* desired width (change to 480/320 etc) */
+  max-width: 100%; /* responsive: won't overflow on small screens */
+  height: auto;
+  display: block;
+  border: 0;
+  object-fit: cover;  /* preserves the crop behavior if needed */
+}
+@media (max-width: 480px) {
+  .small-video { width: 100%; } /* full-width on very small screens */
+}
+</style>
+
+<header class="hero-small">
+  <video class="small-video" autoplay muted loop playsinline preload="metadata" poster="{{ '/assets/images/Airport-board.jpeg' | relative_url }}">
+    <source src="{{ '/assets/videos/animation2.webm' | relative_url }}" type="video/webm">
+    <source src="{{ '/assets/videos/animation2.mp4' | relative_url }}" type="video/mp4">
+    <!-- fallback image -->
+    <img src="{{ '/assets/images/animation2-fallback.jpeg' | relative_url }}" alt="Animated fallback">
+  </video>
+</header>
+
+
 Flight delays are a significant challenge in the aviation industry, costing airlines billions of dollars annually and affecting millions of passengers. According to the [FAA](https://www.faa.gov/), delayed flights can lead to missed connections, disrupted schedules, and decreased customer satisfaction.
 
 In this tutorial, we'll analyze flight delay patterns in the United States using data from the [Bureau of Transportation Statistics (BTS)](https://www.transtats.bts.gov/). Our goal is to build a predictive model that can identify flights at high risk of delays, potentially helping airlines and passengers make better decisions.
