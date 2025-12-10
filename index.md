@@ -17,6 +17,7 @@ To find patterns and perform predictive analysis, the best tool in our hand is D
 
 We will be using Python and other popular data science libraries in Google Colab for this tutorial. Colab is amazing if you are just starting your data science journey. You can learn more about [Google Colab here](https://colab.research.google.com/notebooks/intro.ipynb).
 
+### **Table of Contents**
 
 <div class="toc">
   <ul>
