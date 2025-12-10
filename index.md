@@ -2,6 +2,26 @@
 title: "Analysis of Flight Delays in the United States"
 permalink: /
 ---
+<style>
+/* Make the hero fill width, but limit vertical height so it appears wide */
+.hero-header { width: 100%; overflow: hidden; margin-bottom: 1.25rem; }
+
+.hero-img {
+  display: block;
+  width: 100%;
+  height: 34vh;         /* controls visual height: lower = shorter (wider look) */
+  max-height: 360px;    /* cap absolute height on very large screens */
+  object-fit: cover;    /* crop to fill horizontally while preserving aspect ratio */
+  object-position: center; /* change to 'top' or 'center 40%' if you want focus higher/lower */
+  border: 0;
+}
+
+/* Slightly shorter on small screens */
+@media (max-width: 900px) {
+  .hero-img { height: 26vh; max-height: 220px; }
+}
+</style>
+
 <header class="hero-header">
   <img src="{{ '/assets/images/Airport-board.jpeg' | relative_url }}" alt="Airport departures board with blurred travelers" class="hero-img">
 </header>
