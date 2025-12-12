@@ -187,7 +187,6 @@ The BTS provides monthly flight data in separate CSV files. We'll use `glob` to 
 
 
 ```python
-#if you are running this code locally, change the folder_path to the folder location where you have saved the dataset files
 folder_path = 'dataset'
 csv_files = glob.glob(os.path.join(folder_path, "*.csv"))
 combined_df = pd.concat((pd.read_csv(f) for f in csv_files), ignore_index=True)
