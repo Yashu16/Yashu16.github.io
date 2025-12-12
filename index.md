@@ -87,14 +87,6 @@ We will be using Python and other popular data science libraries in Google Colab
   </ul>
 </div>
 
-### Mounting Google Drive
-First, we'll mount Google Drive to access our dataset files. You can skip this step if you're running the notebook locally, and had downloaded the dataset files to your local machine.
-
-
-```python
-from google.colab import drive
-drive.mount('/content/drive')
-```
 
 ### Installing Required Libraries
 
@@ -102,13 +94,14 @@ We'll need several Python packages for our analysis:
 - `category_encoders`: For advanced categorical encoding techniques
 - `xgboost`: A powerful gradient boosting library for classification
 - `imbalanced-learn`: For handling class imbalance in our dataset
+- `gdown`: For downloading publicly shared google drive files
 
 These libraries extend scikit-learn's capabilities and are essential for building robust predictive models. Learn more about [XGBoost](https://xgboost.readthedocs.io/) and [imbalanced-learn](https://imbalanced-learn.org/).
 
 
 ```python
 #code to install required libraries
-!pip install category_encoders xgboost imbalanced-learn
+!pip install category_encoders xgboost imbalanced-learn gdown
 ```
 
     Collecting category_encoders
@@ -183,6 +176,11 @@ Once you go to this website, you will see download button to your left of the ma
 
 This dataset contains detailed information about domestic flights in the United States, including scheduled and actual departure times, delays, and cancellations.
 
+However to make things easier for this tutorial, we have uploaded the data on a public google drive folder. Run the following cell to download the data and store them in a folder called `dataset`.
+
+```python
+!python download_files.py
+```
 ### Loading Multiple CSV Files
 
 The BTS provides monthly flight data in separate CSV files. We'll use `glob` to identify all CSV files in our data directory and combine them into a single DataFrame using `pd.concat()`.
@@ -190,7 +188,7 @@ The BTS provides monthly flight data in separate CSV files. We'll use `glob` to 
 
 ```python
 #if you are running this code locally, change the folder_path to the folder location where you have saved the dataset files
-folder_path = '/content/drive/MyDrive/DS Final Project Data'
+folder_path = 'dataset'
 csv_files = glob.glob(os.path.join(folder_path, "*.csv"))
 combined_df = pd.concat((pd.read_csv(f) for f in csv_files), ignore_index=True)
 ```
