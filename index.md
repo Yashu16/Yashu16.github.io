@@ -2020,10 +2020,3 @@ If you are interested in more advanced model interpretation techniques, consider
 We hope our analysis has helped you understand which factors drive flight delays and how one can use data science life cycle to build effective predictive models.
 
 Learn more about [XGBoost feature importance](https://xgboost.readthedocs.io/en/latest/python/python_intro.html#training) and [interpreting tree-based models](https://christophm.github.io/interpretable-ml-book/tree.html).
-
-
-
-
-```python
-
-```
