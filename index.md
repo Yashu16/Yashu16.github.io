@@ -3,16 +3,15 @@ title: "Analysis of Flight Delays in the United States"
 permalink: /
 ---
 <style>
-/* Make the hero fill width, but limit vertical height so it appears wide */
 .hero-header { width: 100%; overflow: hidden; margin-bottom: 1.25rem; }
 
 .hero-img {
   display: block;
   width: 100%;
-  height: 34vh;         /* controls visual height: lower = shorter (wider look) */
-  max-height: 360px;    /* cap absolute height on very large screens */
-  object-fit: cover;    /* crop to fill horizontally while preserving aspect ratio */
-  object-position: center; /* change to 'top' or 'center 40%' if you want focus higher/lower */
+  height: 34vh;        
+  max-height: 360px;    
+  object-fit: cover;    
+  object-position: center; 
   border: 0;
 }
 
@@ -35,25 +34,25 @@ Some of you might have experienced flight delays during your travels. It's frust
 <style>
 .hero-small {
   width: 100%;
-  clear: both;                /* place below any floats (remove if you want it beside floats) */
+  clear: both;                
   display: flex;
-  justify-content: center;    /* horizontal centering */
-  align-items: center;        /* vertical centering inside the row */
-  margin: 1rem 0;             /* spacing above/below */
+  justify-content: center;    
+  align-items: center;        
+  margin: 1rem 0;             
   box-sizing: border-box;
 }
 
-/* The video itself: set the desired visual width, keep responsive */
+
 .small-video {
-  width: 640px;    /* desired width (change to 480/320 etc) */
-  max-width: 100%; /* responsive: won't overflow on small screens */
+  width: 640px;   
+  max-width: 100%; 
   height: auto;
   display: block;
   border: 0;
-  object-fit: cover;  /* preserves the crop behavior if needed */
+  object-fit: cover;  
 }
 @media (max-width: 480px) {
-  .small-video { width: 100%; } /* full-width on very small screens */
+  .small-video { width: 100%; } 
 }
 </style>
 
@@ -426,25 +425,25 @@ filtered_df = new_df[filter_cols]
 <style>
 .hero-small {
   width: 100%;
-  clear: both;                /* place below any floats (remove if you want it beside floats) */
+  clear: both;                
   display: flex;
-  justify-content: center;    /* horizontal centering */
-  align-items: center;        /* vertical centering inside the row */
-  margin: 1rem 0;             /* spacing above/below */
+  justify-content: center;    
+  align-items: center;        
+  margin: 1rem 0;             
   box-sizing: border-box;
 }
 
-/* The video itself: set the desired visual width, keep responsive */
+
 .small-video {
-  width: 640px;    /* desired width (change to 480/320 etc) */
-  max-width: 100%; /* responsive: won't overflow on small screens */
+  width: 640px;    
+  max-width: 100%; 
   height: auto;
   display: block;
   border: 0;
-  object-fit: cover;  /* preserves the crop behavior if needed */
+  object-fit: cover;  
 }
 @media (max-width: 480px) {
-  .small-video { width: 100%; } /* full-width on very small screens */
+  .small-video { width: 100%; }
 }
 </style>
 
