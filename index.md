@@ -149,11 +149,11 @@ from sklearn.ensemble import RandomForestClassifier
 
 **Data Source:** [Bureau of Transportation Statistics - On-Time Performance](https://transtats.bts.gov/Fields.asp?gnoyr_VQ=FGJ)
 
-Once you go to this website, you will see download button to your left of the main data description table, under data tools. Once you click on download, it will take you to a new page where you can select the year and month of data you want to download. For this tutorial, we have taken very recent data for latest analysis, from January to July 2025. Once you have different months data, you can upload them to google drive and follow what we have done in previous section to mount google drive, and load multple csv files using glob or any other method you prefer.
+Once you go to this website, you will see download button to your left of the main data description table, under data tools. Once you click on download, it will take you to a new page where you can select the year and month of data you want to download. For this tutorial, we have taken very recent data for latest analysis, from January to July 2025. Once you have different months data, you can save them in a separate folder, and load multple csv files using glob or any other method you prefer.
 
 This dataset contains detailed information about domestic flights in the United States, including scheduled and actual departure times, delays, and cancellations.
 
-However to make things easier for this tutorial, we have uploaded the data on a public google drive folder. Run the following cell to download the data and store them in a folder called `dataset`.
+However, to make things easier for this tutorial, we have uploaded the data on a public google drive folder. Run the following cell to download the data and store them in a folder called `dataset`.
 
 ```python
 !python download_files.py
